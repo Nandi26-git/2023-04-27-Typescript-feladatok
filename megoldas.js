@@ -23,8 +23,10 @@ function SzovegesErtekeles(jegy) {
 SzovegesErtekeles(2);
 function HarommalOszthatokSzama(szamTomb) {
     var eredmeny = 0;
-    szamTomb.forEach(function (szam) { if (szam % 3 === 0)
-        eredmeny++; });
+    szamTomb.forEach(function (szam) {
+        if (szam % 3 === 0)
+            eredmeny++;
+    });
     return eredmeny;
 }
 HarommalOszthatokSzama([10, 23, 12, 24, 31, 33, 42, 20]);
@@ -33,7 +35,7 @@ function Nyeroszamok(mennyiseg, alsoHatar, felsoHatar) {
     for (var i = 0; i < mennyiseg; i++) {
         var generaltSzam = Math.floor(Math.random() * (felsoHatar - alsoHatar + 1) + alsoHatar);
         if (szamok.includes(generaltSzam)) {
-            i - 1;
+            i--;
         }
         else {
             szamok.push(generaltSzam);
