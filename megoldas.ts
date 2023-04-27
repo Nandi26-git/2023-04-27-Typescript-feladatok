@@ -38,7 +38,7 @@ function Nyeroszamok(mennyiseg: number, alsoHatar: number, felsoHatar: number): 
     for (let i: number = 0; i < mennyiseg; i++) {
         let generaltSzam = Math.floor(Math.random() * (felsoHatar - alsoHatar + 1) + alsoHatar)
         if (szamok.includes(generaltSzam)) {
-            i - 1;
+            i--;
         } else { szamok.push(generaltSzam) }
     }
     return szamok
